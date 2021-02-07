@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import { CardProps } from './Components/UI/Card';
 import ItemBody from './Components/ItemBody';
-import { search, sort, successHelper, errorHelper } from './Utils/helper';
-import dataSource from './data/data.json';
+import { search, sort, successHelper } from './Utils/helper';
+import dataSource from './data/nl.json';
 
 import './Styles/App.css';
 
@@ -13,7 +13,6 @@ function App() {
   const [province, setProvince] = useState('');
   const [data, setData] = useState([]);
   const [sortValue, setSortValue] = React.useState('');
-  const [err, setErr] = useState('');
 
   const handleSelectSortCriteria = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -35,8 +34,7 @@ function App() {
     }
     if (sortValue === 'location') {
       navigator.geolocation.getCurrentPosition(
-        successHelper(searchResult, setData),
-        errorHelper(setErr)
+        successHelper(searchResult, setData)
       );
     }
     setData(searchResult);
