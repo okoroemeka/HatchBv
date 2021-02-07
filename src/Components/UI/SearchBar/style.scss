@@ -1,0 +1,32 @@
+@import '../../../Styles/Variables.scss';
+
+.search__wrapper {
+  margin-bottom: 1.2rem;
+
+  .MuiTypography-colorSecondary {
+    color: $headerFontColor;
+  }
+  @media only screen and (min-width: 769px) {
+    margin: 0;
+  }
+  .search__area {
+    width: 100%;
+
+    .MuiOutlinedInput-input {
+      padding: 10.5px 14px;
+    }
+    @media only screen and (min-width: 769px) {
+      width: 70%;
+    }
+
+    fieldset {
+      border: unset;
+    }
+
+    fieldset,
+    &:hover .MuiOutlinedInput-notchedOutline,
+    &.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border: 1px solid #b5c4d2;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../Styles/Variables.scss';
+
+.item__wrapper {
+  padding: $headerPadding;
+  height: calc(100% - 30vh);
+  overflow-y: scroll;
+  background-color: #f0f8ff;
+  position: relative;
+
+  .no__city {
+    color: $headerFontColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../Styles/Variables.scss';
+
+.wrapper {
+  height: auto;
+  align-items: center;
+  padding: $headerPadding;
+  background: $headerColor;
+
+  .radio__buttons__container {
+    .MuiFormLabel-root {
+      color: $headerFontColor;
+    }
+    .MuiRadio-colorSecondary.Mui-checked {
+      color: #0000008a;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    height: 30vh;
+    padding: 0 $headerPadding;
+  }
+}

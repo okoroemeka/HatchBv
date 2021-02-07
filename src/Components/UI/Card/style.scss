@@ -1,0 +1,26 @@
+@import '../../../Styles/Variables.scss';
+
+.card__wrapper {
+  padding: 1rem;
+
+  .card {
+    padding: 1rem;
+    box-shadow: 0px 2px 40px -1px rgba(0, 0, 0, 0.14);
+  }
+
+  .detail {
+    display: flex;
+
+    .item__name {
+      color: #606067;
+      font-size: $normalFontSize;
+      text-transform: capitalize;
+      margin-right: 0.3rem;
+    }
+    .item {
+      color: #808080;
+      font-size: $normalFontSize;
+      font-weight: normal;
+    }
+  }
+}
